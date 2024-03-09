@@ -46,6 +46,12 @@ namespace ApiAlmoxarifao.Api.Controllers
 
                 };
 
+                foreach (var (numero, stringDoNumero) in from int number in new List<int>()
+                    let batata = number.ToString() select (number, batata))
+                {
+
+                }
+
                 await _requisicaoRepository.Adicionar(requisicaoNova);
 
                 return Ok("Cadastrado com sucesso");
